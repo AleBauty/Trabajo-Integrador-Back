@@ -1,0 +1,33 @@
+### Obtener todos los productos
+GET http://localhost:3000/productos
+
+
+### Obtener un producto por código
+GET http://localhost:3000/productos/1
+
+### Filtrar productos por rango de precios
+GET http://localhost:3000/productos/filtrar?precioMin=100&precioMax=500
+
+### Agregar un nuevo producto
+POST http://localhost:3000/productos
+Content-Type: application/json
+
+{
+  "codigo": 32,
+  "nombre": "Nuevo Producto22",
+  "precio": 999.99,
+  "categorias": ["Categoria3", "Categoria4"]
+}
+
+### Actualizar un producto
+PUT http://localhost:3000/productos/1
+Content-Type: application/json
+
+{
+  "nombre": "Nombre Actualizado",
+  "precio": 899.99,
+  "categorias": ["Categoria1", "Categoria3"]
+}
+
+### Eliminar un producto
+DELETE http://localhost:3000/productos/1
